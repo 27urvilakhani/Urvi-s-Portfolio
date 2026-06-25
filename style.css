@@ -10,7 +10,7 @@
     --mint: #7FFFD0;
     --mono: 'Space Mono', monospace;
     --body: 'Montserrat', sans-serif;
-    --display: 'Syne', sans-serif;
+    --display: 'Chakra Petch', sans-serif;
   }
  
   html { scroll-behavior: smooth; }
@@ -53,7 +53,14 @@
     transition: color 0.2s;
   }
   .nav-links a:hover { color: var(--mint); }
- 
+ .ascii-face{
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-8px);}
+}
   #hero {
     min-height: 100vh;
     display: grid;
