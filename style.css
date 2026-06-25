@@ -1,5 +1,4 @@
-
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
  
   :root {
     --bg: #0D0D0D;
@@ -9,8 +8,8 @@
     --muted: #888;
     --lavender: #B8A9FF;
     --mint: #7FFFD0;
-    /* --mono: 'Space Mono', monospace; */
-    --mono: 'JetBrains Mono', monospace;
+    --mono: 'Space Mono', monospace;
+    --body: 'Montserrat', sans-serif;
     --display: 'Syne', sans-serif;
   }
  
@@ -19,7 +18,7 @@
   body {
     background: var(--bg);
     color: var(--text);
-    font-family: var(--mono);
+    font-family: var(--body);
     font-size: 14px;
     line-height: 1.7;
     overflow-x: hidden;
@@ -50,17 +49,11 @@
     font-size: 12px;
     letter-spacing: 0.08em;
     text-transform: uppercase;
+    font-family: var(--mono);
     transition: color 0.2s;
   }
   .nav-links a:hover { color: var(--mint); }
- .ascii-face{
-  font-size: 0.32rem;
-  line-height: 0.75;
-}
-
-.ascii-container{
-  transform: scale(0.8);
-}
+ 
   #hero {
     min-height: 100vh;
     display: grid;
@@ -83,6 +76,7 @@
     padding: 4px 10px;
     border-radius: 2px;
     margin-bottom: 28px;
+    font-family: var(--mono);
   }
  
   h1 {
@@ -156,6 +150,7 @@
     color: var(--muted);
     letter-spacing: 0.2em;
     text-transform: uppercase;
+    font-family: var(--mono);
   }
  
   section { padding: 96px 48px; border-bottom: 1px solid var(--border); }
@@ -166,6 +161,7 @@
     text-transform: uppercase;
     color: var(--mint);
     margin-bottom: 16px;
+    font-family: var(--mono);
   }
   .section-title {
     font-family: var(--display);
@@ -181,7 +177,7 @@
     gap: 64px;
     align-items: start;
   }
-  .about-text { color: var(--muted); line-height: 1.9; }
+  .about-text { color: var(--muted); line-height: 1.9; font-size: 14px; }
   .about-text p + p { margin-top: 16px; }
   .about-text strong { color: var(--text); }
  
@@ -206,7 +202,7 @@
     line-height: 1;
     margin-bottom: 6px;
   }
-  .stat-label { font-size: 11px; color: var(--muted); letter-spacing: 0.08em; }
+  .stat-label { font-size: 11px; color: var(--muted); letter-spacing: 0.08em; font-family: var(--mono); }
  
   #skills .skills-grid {
     display: grid;
@@ -220,6 +216,7 @@
     text-transform: uppercase;
     color: var(--mint);
     margin-bottom: 14px;
+    font-family: var(--mono);
   }
   .skill-tag {
     display: inline-block;
@@ -229,6 +226,7 @@
     border-radius: 2px;
     margin: 3px 3px 3px 0;
     color: var(--muted);
+    font-family: var(--mono);
     transition: all 0.15s;
   }
   .skill-tag:hover { border-color: var(--lavender); color: var(--lavender); }
@@ -261,13 +259,13 @@
   }
   .project-card:hover { border-color: var(--lavender); transform: translateY(-4px); }
   .project-card:hover::before { opacity: 1; }
-  .project-num { font-size: 11px; color: var(--lavender); letter-spacing: 0.1em; }
+  .project-num { font-size: 11px; color: var(--lavender); letter-spacing: 0.1em; font-family: var(--mono); }
   .project-name {
     font-family: var(--display);
     font-size: 22px;
     font-weight: 700;
   }
-  .project-desc { color: var(--muted); font-size: 12px; line-height: 1.8; }
+  .project-desc { color: var(--muted); font-size: 13px; line-height: 1.9; }
   .project-tags { display: flex; flex-wrap: wrap; gap: 6px; }
   .project-tag {
     font-size: 10px;
@@ -283,6 +281,7 @@
     color: var(--mint);
     text-decoration: none;
     letter-spacing: 0.06em;
+    font-family: var(--mono);
     transition: opacity 0.2s;
   }
   .project-link:hover { opacity: 0.7; }
@@ -308,7 +307,7 @@
   .dot-red { background: #FF5F57; }
   .dot-yellow { background: #FFBD2E; }
   .dot-green { background: #28C840; }
-  .terminal-title { margin-left: 8px; font-size: 12px; color: var(--muted); }
+  .terminal-title { margin-left: 8px; font-size: 12px; color: var(--muted); font-family: var(--mono); }
   .terminal-body { padding: 24px; }
   .terminal-output {
     font-size: 13px;
@@ -317,9 +316,10 @@
     color: var(--mint);
     margin-bottom: 16px;
     white-space: pre-wrap;
+    font-family: var(--mono);
   }
   .terminal-input-row { display: flex; align-items: center; gap: 8px; }
-  .terminal-prompt { color: var(--lavender); font-size: 13px; white-space: nowrap; }
+  .terminal-prompt { color: var(--lavender); font-size: 13px; white-space: nowrap; font-family: var(--mono); }
   .terminal-input {
     background: transparent;
     border: none;
@@ -334,7 +334,7 @@
     text-align: center;
     margin-bottom: 32px;
     color: var(--muted);
-    font-size: 13px;
+    font-size: 14px;
   }
  
   #contact .contact-inner {
@@ -343,7 +343,7 @@
     gap: 64px;
     align-items: start;
   }
-  .contact-text { color: var(--muted); line-height: 1.9; }
+  .contact-text { color: var(--muted); line-height: 1.9; font-size: 14px; }
   .contact-links { display: flex; flex-direction: column; gap: 16px; }
   .contact-link {
     display: flex;
@@ -359,7 +359,7 @@
   }
   .contact-link:hover { border-color: var(--lavender); }
   .contact-link-icon { font-size: 18px; width: 24px; text-align: center; }
-  .contact-link-label { font-size: 11px; color: var(--muted); letter-spacing: 0.08em; display: block; margin-bottom: 2px; }
+  .contact-link-label { font-size: 10px; color: var(--muted); letter-spacing: 0.12em; display: block; margin-bottom: 2px; font-family: var(--mono); text-transform: uppercase; }
   .contact-link-value { font-size: 13px; }
  
   footer {
@@ -370,6 +370,7 @@
     color: var(--muted);
     font-size: 11px;
     letter-spacing: 0.06em;
+    font-family: var(--mono);
   }
   footer span { color: var(--lavender); }
  
@@ -399,6 +400,12 @@
     #about .about-grid,
     #contact .contact-inner { grid-template-columns: 1fr; gap: 40px; }
     footer { flex-direction: column; gap: 8px; text-align: center; }
+    body { font-size: 15px; line-height: 1.8; }
+    .hero-desc { font-size: 14px; }
+    .about-text { font-size: 15px; }
+    .contact-text { font-size: 15px; }
+    .project-desc { font-size: 13px; }
+    #projects .projects-grid { grid-template-columns: 1fr; }
   }
  
   @media (prefers-reduced-motion: reduce) {
