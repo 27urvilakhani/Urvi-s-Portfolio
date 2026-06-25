@@ -9,7 +9,8 @@
     --muted: #888;
     --lavender: #B8A9FF;
     --mint: #7FFFD0;
-    --mono: 'Space Mono', monospace;
+    /* --mono: 'Space Mono', monospace; */
+    --mono: 'JetBrains Mono', monospace;
     --display: 'Syne', sans-serif;
   }
  
