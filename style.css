@@ -52,7 +52,14 @@
     transition: color 0.2s;
   }
   .nav-links a:hover { color: var(--mint); }
- 
+ .ascii-face{
+  font-size: 0.32rem;
+  line-height: 0.75;
+}
+
+.ascii-container{
+  transform: scale(0.8);
+}
   #hero {
     min-height: 100vh;
     display: grid;
